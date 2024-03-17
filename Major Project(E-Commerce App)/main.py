@@ -1,4 +1,9 @@
-#first module-login registration if user does'nt exist redirected to registration
+#E-commerce App like Amazon
+'''
+#Features 
+1.Login system
+2.Cart System
+'''
 from Register import *
 from Products import *
 from Orders import *
