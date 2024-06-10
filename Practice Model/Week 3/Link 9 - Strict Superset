@@ -1,0 +1,12 @@
+a = set(map(int, input().split()))
+
+def asupersetb(a: set, b: set):
+    if (len(a)>len(b)) and (b == b.intersection(a)):
+        return True
+    else:
+        return False            
+results = []
+for _ in range(int(input())):
+    b = set(map(int, input().split()))
+    results.append(asupersetb(a, b))
+print(all(results))
