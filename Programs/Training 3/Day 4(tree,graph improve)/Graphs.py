@@ -28,10 +28,34 @@ def bfs(start,graph):
     q=[start]
     while len(q)!=0:
         ele=q.pop(0)
-        for i in graph[ele]:
+        for i in graph[ele]: 
             if i not in visited:
                 q.append(i)
                 visited.append(i)
     return visited
 print(bfs("B",graph))
 
+#dfs checks in depth
+#         a
+#        / \
+#       b - c
+#graph={
+#       "A":["b","c"]
+#       "b":["a","b"]      
+#       "c":["a","c"]
+#}
+#we have queue(visited) and stack
+#take start as b
+# b added to stack and visited
+# and now b adjacents are checked a,b
+#first a is added to stack and vsisited and then a adjacent are checked b,c
+# a->b is already in visited so not added
+#a-> c added to stack and queue
+def dfs(start,graph,visited):
+    visited.append(start)
+    for i in graph[start]:
+        if i not in visited:
+            dfs(i,graph,visited)
+    return visited
+print(dfs("B",graph,[]))
+    
