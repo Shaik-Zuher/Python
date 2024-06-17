@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import OrderedDict
+od=OrderedDict()
+for i in range(int(input())):
+    item,price=input().rsplit(' ',1)
+    if item not in od:
+        od[item]=int(price)
+    else:
+        od[item]+=int(price)
+for i,j in od.items():
+    print(i,j)
