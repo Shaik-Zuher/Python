@@ -15,4 +15,6 @@ class Solution:
             if a>b:
                 return gcd(a-b,b)
             return gcd(a,b-a)
+        return gcd(A,B)
+
  # lcm can be calculated by lcm=(A*B)//gcd(A,B)
