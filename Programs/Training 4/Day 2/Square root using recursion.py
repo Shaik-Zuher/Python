@@ -1,3 +1,4 @@
+#square root using binary search
 def findSquareRootUsingBS(number):
     left, right = 1,number 
     result = 1 
