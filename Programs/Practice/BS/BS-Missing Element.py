@@ -45,7 +45,7 @@ def findKthPositive(arr, k):
     e=len(arr)-1
     while(s<=e):
         mid=s+(e-s)//2
-        if k>arr[mid]-(mid+1):
+        if k>arr[mid]-(mid+1):#= not used becuase gives errors
             s=mid+1
         else:
             e=mid-1
