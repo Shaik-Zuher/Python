@@ -117,3 +117,14 @@ class Solution(object):
             x=x.next
         temp.next=None
         return nx
+""""""
+#ll can aso be used to find duplicate numbers
+#if linear not asked then hp can be used so we use ll instead
+#think of numbers of nodes as number repeated there is loop for sure
+#Let us deal our list as linked list, where i is connected with nums[i].
+"""indices are connected to elements
+Consider example 6, 2, 4, 1, 3, 2, 5, 2. Then we have the following singly-linked list:
+0 -> 6 -> 5 -> 2 -> 4 -> 3 -> 1 -> 2 -> ...
+We start with index 0, look what is inside? it is number 6, so we look at index number 6, what is inside? Number 5 and so on. Look at the image below for better understanding.
+So the goal is to find loop in this linkes list. Why there will be always loop? Because nums[1] = nums[5] in our case, and similarly there will be always duplicate, and it is given that it is only one.
+"""
