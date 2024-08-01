@@ -1,3 +1,4 @@
+######Ll can be soo tricky but everything is in your imagination
 #linked lst and hasmap are related
 #one powerful algo is hare tortosie mechanism
 #1 2 3 4 5 we have this find middle
