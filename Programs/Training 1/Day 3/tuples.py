@@ -27,4 +27,4 @@ for i in dicti:
 dicti={"key":"value",104:106,"104":106,"key":97}
 print(dicti)
 #delete value in dict
-a=del dicti[0]
+del dicti[0]
