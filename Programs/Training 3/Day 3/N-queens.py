@@ -1,5 +1,4 @@
 class Solution(object):
- 
     def isPossible(self, row, col, board, n):
         # Check-1 --> same row, left cols
         prevCol = col - 1
