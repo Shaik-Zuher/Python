@@ -18,3 +18,4 @@ class Solution:
         return gcd(A,B)
 
  # lcm can be calculated by lcm=(A*B)//gcd(A,B)
+#find gcd of array can be tricky so loop and take every 2 elements.dont forget to insert gcd of previous 2 in front
