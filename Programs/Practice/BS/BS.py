@@ -37,3 +37,11 @@ if left<right: ############
 e=mid-1
 #########THIS is used in min cost operations type questions
 """
+"""
+By using binary search we can even find pair of elements withs sum equal to target
+ex: 1 2 3 4 target=3
+    i     j   1+4=5>3 so we need to decrese big element(i.e)j
+    i   j
+    i j      match  else <target increase small element (i.e)i
+This can be used for a lot of searchings
+"""
