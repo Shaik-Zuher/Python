@@ -44,4 +44,6 @@ ex: 1 2 3 4 target=3
     i   j
     i j      match  else <target increase small element (i.e)i
 This can be used for a lot of searchings
+Can also be used for 3 sum where one loop wholey and j=i+1 and k is last element in array
+Similarly for any sums(4 sum or 5 sum)
 """
