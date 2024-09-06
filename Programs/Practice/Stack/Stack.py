@@ -1,3 +1,8 @@
+####Queue is used in circular,simulations,dfs,sliding window
+#pop(0) has more complexity so use popleft instead
+#insert takes more time complexity so try to use append/assignment
+
+
 #Motonic stack is tack where elements are ascending or descending order
 #Next greater,Next smaller,prev greater etc 
 #####We have 3 types of next element tracker
