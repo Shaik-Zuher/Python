@@ -41,7 +41,7 @@ for i in range(k,len(arr)):
     if s==sum:
         print(window)
 """
-contingous,continous,subarray,subsequenec with some condition
+2)contingous,continous,subarray,subsequenec with some condition
 This requires 2 points where 1 will act as start of window and other as end of window
 Here we won't have fixed window size
 EXAMPLE
@@ -85,7 +85,8 @@ while r<len(arr):
     if s>ss:    # this is only change
         s-=arr[l]
         l+=1
-    length=max(length,(r-l+1))#dont forget array is 0 based
+    if s<=ss: #if condition this must be present for foresight protection of cases
+        length=max(length,(r-l+1))#dont forget array is 0 based
     r+=1
 print(length)
 """template
@@ -94,7 +95,31 @@ while r<len(arr):
     if s>ss:    # condition   this is what changes depending on requirement
         s-=arr[l]
         l+=1    #shrink
-    length=max(length,(r-l+1))#dont forget array is 0 based
+    if s<=ss: #if condition this must be present for foresight protection of cases
+        length=max(length,(r-l+1))#dont forget array is 0 based
     r+=1        #expand
 """
 #This better approch must be used when subarray is asked to be printed
+"""
+3)count of subarrays with condition
+ex:count the number of subarrays with sum=0
+"""
+####Logic here
+#count(condtion)=count(<=condition)-count(<=condition-1)
+#arr=[1,0,0,1] find number of subarrays where sum=0
+arr=[1,0,0,1]
+goal=0
+def count(arr,goal):
+    i=0
+    j=0
+    c=0
+    while j<len(arr):
+        s+=arr[j]
+        while s>goal: #if must not be used
+            s-=arr[i]
+            i+=1
+        if arr[j]<=goal:
+            c+=(j-i+1)  #like this becuse [1] 1 elemnt added  [1,2] has [1][2][1,2] alredy [1] is added we need to [2][2,3]==length.....
+        j+=1
+    return c 
+print(count(arr,goal)-count(arr,goal-1))
