@@ -1,4 +1,5 @@
 #sliding always need not to have some array called as window.It can also be achived with pointers(i.e type of 2 pointers)
+#####sliding window anf hashmap are freqently used
 #window can be fixed size or any size.This is just a mechanism
 """
 patterns
