@@ -1,12 +1,12 @@
 #sliding always need not to have some array called as window.It can also be achived with pointers(i.e type of 2 pointers)
-#####sliding window anf hashmap are freqently used
+#####sliding window anf hashmap are freqently used but when ever hp[i]==0 make sure delete it  and last longst length condition must always have <= because we need longest someytimes it might be even small
 #window can be fixed size or any size.This is just a mechanism
 """
 patterns
 1)fixed window size
 2)longest common substring with condition
 3)no of subarrays with condition
-4)Minimum subarray with condition
+4)minimum subarray with condition
 """
 #pattern 4 is not the same as min max sliding window(this is stack)
 """
@@ -51,6 +51,7 @@ EXAMPLE
   b)better      -----if give subarray asked
   c)best------only useful for ones where something like max/min length is asked not usefull for give the subarray
 """
+###########Most of time it needs hashmap but when ever hp[i]==0 make sure delete it  and last longst length condition must always have <= because we need longest someytimes it might be even small
 ss=4
 #better
 #take 2 pointers l,r 
