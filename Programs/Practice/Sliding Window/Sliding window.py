@@ -15,6 +15,9 @@ Identify:
 2)Contagious 
 3)subarray,subsequence
 4)consecutive
+5)Contains window in question
+Note:You will be always given 2 inputs then only sliding window
+###Remember window min max of stack problem.If no 2 inputs.Max it wont be sliding window except rare cases
 """
 ######################Queue
 ######Implementation of sliding window requires queue
@@ -125,3 +128,7 @@ def count(arr,goal):
         j+=1
     return c 
 print(count(arr,goal)-count(arr,goal-1))
+"""
+4.Minmum window problems
+same as 2nd pattern but somewhat different
+"""
