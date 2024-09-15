@@ -1,6 +1,8 @@
 #sliding always need not to have some array called as window.It can also be achived with pointers(i.e type of 2 pointers)
 #####sliding window anf hashmap are freqently used but when ever hp[i]==0 make sure delete it  and last longst length condition must always have <= because we need longest someytimes it might be even small
-#window can be fixed size or any size.This is just a mechanism
+#window can be fixed size or any size.This is just a mechanism of shrink and extend
+#need to find shrink expand condition
+########Important siding window questions will always some condition or 2 inputs.Otherwise it wont be sliding window(rare cases)
 """
 patterns
 1)fixed window size
