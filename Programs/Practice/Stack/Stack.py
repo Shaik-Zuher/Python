@@ -1,7 +1,7 @@
 ####Queue is used in circular,simulations,dfs,sliding window
 #pop(0) has more complexity so use popleft instead
 #insert takes more time complexity so try to use append/assignment
-
+#Identification when we have loop i,j and j in dependent on i(range from i to n like this) we can use stacks
 
 #Motonic stack is tack where elements are ascending or descending order
 #Next greater,Next smaller,prev greater etc 
