@@ -1,4 +1,5 @@
 #Sliding window lenght is taken as j-i+1 and stacks j-(i+1) in stacks we want exclusive we want to find length between i and unlike sliding window where we want both i,j
+#Sliding window affected by negative numbers crap!!!!
 
 #sliding always need not to have some array called as window.It can also be achived with pointers(i.e type of 2 pointers)
 ################sliding window anf hashmap are freqently used but when ever hp[i]==0 make sure delete it  and last longst length condition must always have <= because we need longest someytimes it might be even small
