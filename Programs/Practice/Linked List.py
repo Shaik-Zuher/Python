@@ -1,6 +1,6 @@
 ######LL can be soo tricky but everything is in your imagination
 ####IT can mulitple ways just brainstorm
-#linked lst and hasmap are related
+#linked list and hasmap are related
 #one powerful algo is hare tortosie mechanism
 #1 2 3 4 5 we have this find middle
 #turtle moves 1 poinet and hare moves 2 points
