@@ -51,4 +51,4 @@ class Solution(object):
                 s.append(time[i])
             elif time[i]>s[-1]:
                 s.append(time[i])
-        return len(s)
+        return len(s)#king of court
