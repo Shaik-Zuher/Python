@@ -10,9 +10,9 @@ Output:
 ##This is just like monotic stack(stock span problem)
 #Our idea is we store a element whenver we get max elemnt we remove elemnents less than it from arr becoz we want only max element we don't need small ones so lets remove it
 #store=[] i=j=0
-#store=[1] arr[j]=0(window is 1)
-#store=[2] i=0 arr[j]=1(window 1 2) we removed one because 2>1 why i need small one I need bigs 
-#store=[3] i=0 arr[j]=2(window 1 2 3) we removed 2 
+#store=[1] arr[j]=1(window is 1)
+#store=[2] i=0 arr[j]=2(window 1 2) we removed one because 2>1 why i need small one I need bigs 
+#store=[3] i=0 arr[j]=3(window 1 2 3) we removed 2 
 #store[3,1] i=0 j=3 arr[j]=1(window 2 3 1) it is not greater so for now it wont be max but can be in future so store it and j==k store first element from store which wil definitely be max
 #store=[3,4] i=1(window increased) j=4 and arr[j]=4(window 3 1 4) but we need to check if store[0] is out of our window and max of current window still 3
 #store=[3,5] i=2(window increased) j=5 and arr[j]=5(window is 1 4 5) but we need to check if store[0] is out of our window and max of current window still 3
