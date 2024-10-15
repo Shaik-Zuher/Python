@@ -7,6 +7,8 @@ Min or max element,K
 It requires sorting
 #There is confusion with binary search(same minumum type problems)
 #Both can be used Time of bs is nlogn(if sort needed) and Time of heap is nlogk
+######Most important whenever we constantly need to sort array and get some largest or smallest elements
+      then this heap can be used becoz heap is always sorted even if you insert a new element or delete element
 """
 ##ex: we want 3rd min element brute force is sort arr and find the 3rd index
 #Plan comes we need only 3 elements why sort whole array waste of time and space so we use heap which will have constant size 3
