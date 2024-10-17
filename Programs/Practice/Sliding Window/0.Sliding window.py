@@ -98,6 +98,7 @@ while r<len(arr):
         s-=arr[l]
         l+=1
     if s<=ss: #if condition this must be present for foresight protection of cases
+#############Another point------whenever there is while inside while main condition if not needed at all
         length=max(length,(r-l+1))#dont forget array is 0 based
     r+=1
 print(length)
@@ -125,6 +126,7 @@ def count(arr,goal):
     i=0
     j=0
     c=0
+    s=0
     while j<len(arr):
         s+=arr[j]
         while s>goal: #if must not be used
@@ -134,6 +136,7 @@ def count(arr,goal):
             c+=(j-i+1)  #like this becuse [1] 1 elemnt added  [1,2] has [1][2][1,2] alredy [1] is added we need to [2][2,3]==length.....
         j+=1
     return c 
+#############Another point------whenever there is while inside while main condition if not needed at all
 print(count(arr,goal)-count(arr,goal-1))
 """
 4.Minmum window problems
