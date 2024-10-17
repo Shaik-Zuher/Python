@@ -1,6 +1,9 @@
 #Heaps can be many sometimes tree or queue
 #Heap is tree like structure in which root node is either most maximum or most mimimum
 #To help the coder it is made to look like priority queue(abstraction)
+#heaps always need not to be numbers they can can be lists
+#[[0,"a"],[1,"b"],[2,"c"]] like this
+#[[0,2],[0,1]] when min heap smallest number at index 0 will be popped if tied then second element is checked
 """
 Identification:
 Min or max element,K
@@ -10,6 +13,8 @@ It requires sorting
 ######Most important-Whenever we constantly need to sort array after inserting or deleting element and get some largest or smallest elements
       then this heap can be used becoz heap is always sorted even if you insert a new element or delete element
 """
+#smallest means max heap,largest means min heap
+####We have top k freqent elements top=biggest=largest(We can use min heap)
 """
 1)Min max element k
 2)priority/event based problems
