@@ -6,7 +6,7 @@ Output: 1 2 3 4 5 6 7 8 9
 Explanation: Above test case has 3 sorted arrays of size 3, 3, 3 arr[][] = [[1, 2, 3],[4, 5, 6],[7, 8, 9]]. The merged list will be [1, 2, 3, 4, 5, 6, 7, 8, 9].
 """
 ######Similarly we have merge linked lists--merge is used there
-#merging all lists
+#Merging all lists
 #There a lot of ways 
 #Basic-concate all lists into one list and sort(O(NlogN))
 #Some what better is merge sort(O(NlogN))---good all lists are same size
