@@ -52,7 +52,7 @@ class Solution:
     #Function to merge k sorted arrays.
     #Example:{{1,2,3},{4,5,6},{7,8,9}}
     def mergeKArrays(self, arr, K):
-#its not neccesary to solev this using heaps but there are many problems on this same concept heap+bfs(type)
+#Its not neccesary to solev this using heaps but there are many problems on this same concept heap+bfs(type)
         ans=[]
         heapify(ans)#generally  heap
         #brute force takes somewhat aroun O(N^2)-I hate it instead of it lets use one loop ans store only small in every list
