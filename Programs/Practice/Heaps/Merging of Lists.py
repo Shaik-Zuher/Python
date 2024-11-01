@@ -59,7 +59,7 @@ class Solution:
         for i in range(K):#K is len of arr
             heappush(ans,[arr[i][0],i,0])#its already sorted
             #            min ele,index in array,subindex in inner array----This is acting like dfs
-        #heap=[[1,1,0],[4,2,0],[7,3,0]]
+        #Heap=[[1,1,0],[4,2,0],[7,3,0]]
         res=[]
         while ans:
             ele,index,subindex=heappop(ans)
