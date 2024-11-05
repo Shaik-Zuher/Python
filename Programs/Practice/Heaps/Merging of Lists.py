@@ -12,7 +12,7 @@ Explanation: Above test case has 3 sorted arrays of size 3, 3, 3 arr[][] = [[1, 
 #Some what better is merge sort(O(NlogN))---good all lists are same size
 #Another heaps+(somewhat graph dfs)(O(NlogK))--good if lists are different sizes
 """
-#We can use brute force merge sort
+#We can use brute force merge sort.
 #Run a loop on arr and a=arr[1],b=arr[2] merge and store them in arr[1] again a=arr[1],b=arr[3]
 #But still it might be around O(n^2)
 """
