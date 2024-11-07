@@ -14,7 +14,7 @@ It requires sorting
 ######Most important-Whenever we constantly need to sort array after inserting or deleting element and get some largest or smallest elements
       then this heap can be used becoz heap is always sorted even if you insert a new element or delete element
 """
-#smallest means max heap,largest means min heap
+#Smallest means max heap,largest means min heap
 ####We have top k freqent elements top=biggest=largest(We can use min heap)
 """
 1)Min max element k
