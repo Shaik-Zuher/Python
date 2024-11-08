@@ -22,7 +22,7 @@ It requires sorting
 3)median
 4)merging arrays(better than sort when sizes of array not equal)
 """
-##ex: we want 3rd min element brute force is sort arr and find the 3rd index
+##Ex: we want 3rd min element brute force is sort arr and find the 3rd index
 #Plan comes we need only 3 elements why sort whole array waste of time and space so we use heap which will have constant size 3
 #Find small - use max heap, Find big - use min heap
 """
