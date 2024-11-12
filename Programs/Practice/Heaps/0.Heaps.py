@@ -1,4 +1,4 @@
-#Heaps can be many sometimes tree or queue
+#Heaps can be many sometimes tree or queue.
 
 #Heap is tree like structure in which root node is either most maximum or most mimimum
 #To help the coder it is made to look like priority queue(abstraction)
