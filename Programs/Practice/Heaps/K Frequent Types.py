@@ -1,5 +1,5 @@
 ##Top freqent means biggest
-#########Heaps can be used on even strings i.e on frequencies of letters in string
+#########Heaps can be used on even strings i.e on frequencies of letters in string.
 #basically some sort of frequency related things
 #heaps always need not to be numbers they can can be lists
 #[[0,"a"],[1,"b"],[2,"c"]] like this
