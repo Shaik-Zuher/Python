@@ -1,4 +1,4 @@
-##Top freqent means biggest
+##Top freqent means biggest.
 #########Heaps can be used on even strings i.e on frequencies of letters in string.
 #basically some sort of frequency related things
 #heaps always need not to be numbers they can can be lists.
