@@ -4,7 +4,7 @@
 #heaps always need not to be numbers they can can be lists.
 #[[0,"a"],[1,"b"],[2,"c"]] like this.
 """
-In frequency
+In frequency-
 for example create a string with following elements a=7,b=3,c=1 where all elements must be in string and 2 strings not beside
 we starting building string with letter with most freq so we can create longest possible string
 a->ab(because a already used next most freq)->aba(once again a) like this
