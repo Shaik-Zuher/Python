@@ -44,7 +44,7 @@ def bs(N,arr,k):
         nplaced=0
         for i in range(1,N): ##############some mind calc 12   17 have greatest distance lets think we need to minimize that 
             distance=(arr[i]-arr[i-1])/mid       ################# how many stations can be added to minimize it.Lets say mid=2 and if we place one station
-                            ################# 12   15   17 still differnce is 3 so lets place 1 more  so totally 2 stations are place now how to  get this 2
+                            ################# 12   15   17 still differnce is 3 so lets place 1 more  so totally 2 stations are place now how to  get this 3(parts not stations)
                                               #  3    2    diff  can we get by math.ceil(dst/mid)
                                               #but this case has problems with some cases ie if 4 stations are placed
                                               # 12   17
