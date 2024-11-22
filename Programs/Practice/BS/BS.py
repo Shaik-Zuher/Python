@@ -1,4 +1,4 @@
-#Rotated bs 
+#rotated bs 
 #[7,8,9,1,2,3,4,5,6]
 #ie rotated at point to use bs on this 
 #first lets check sorted part and check in that
@@ -37,13 +37,38 @@ if left<right: ############
 e=mid-1
 #########THIS is used in min cost operations type questions
 """
+#Find duplicate element sorted
+arr=[2,2,3,4,4]
 """
-By using binary search we can even find pair of elements withs sum equal to target
-ex: 1 2 3 4 target=3
-    i     j   1+4=5>3 so we need to decrese big element(i.e)j
-    i   j
-    i j      match  else <target increase small element (i.e)i
-This can be used for a lot of searchings
-Can also be used for 3 sum where one loop wholey and j=i+1 and k is last element in array
-Similarly for any sums(4 sum or 5 sum)
+use normal bs check if mid!=mid-1 and mid!=mid+1 return mid
+now our left/right elimination depends on mid position
+example [1,1,2,2] observe pattern every first(duplicate) is in even position and every second(duplicate) in odd posititon
+[1,1,2,3,3,4,4] mid=3(odd index),arr[mid]=3 so arr[mid-1] must also be 3 if not non_duplicate is on left else on right
+[1,1,2,3,3,4,4,5,5] mid=4(even index),arr[mid]=3 so arr[mid+1] must also be 3 if not then non_duplicate is on left else on right
 """
+arr=[1,2,2,3,3,4,4]
+def duplicate(arr):
+    if len(arr)==1:
+        return arr[0]
+    elif arr[0]!=arr[1]:
+        return arr[0]
+    elif arr[-2]!=arr[-1]:
+        return arr[-1]
+    s=0
+    e=len(arr)-1
+    while s<=e:
+        mid=s+(e-s)//2
+        if arr[mid]!=arr[mid-1] and arr[mid]!=arr[mid+1]:
+            return arr[mid]
+        elif mid%2==0:
+            if arr[mid]==arr[mid+1]:
+                s=mid+1
+            else:
+                e=mid-1
+        else:
+            if arr[mid]==arr[mid-1]:
+                s=mid+1
+            else:
+                e=mid-1
+    return -1
+
