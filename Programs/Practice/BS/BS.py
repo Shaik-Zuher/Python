@@ -17,6 +17,7 @@
 ##################################################
 #IN type of max min problems 
 #always return low but not condition becoz low cntains(min) value but not condition 
+#In find min type problems there might be confusion whether bs/heap/greedy bs-sorted heap-priority greedy-decisions. You can use anything
 """
 conditions for bs:
 1)searching
