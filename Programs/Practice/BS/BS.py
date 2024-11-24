@@ -19,6 +19,14 @@
 #always return low but not condition becoz low cntains(min) value but not condition 
 #In find min type problems there might be confusion whether bs/heap/greedy bs-sorted heap-priority greedy-decisions. You can use anything
 """
+Generally, we identify that binary search is applicable with 3 conditions :
+
+
+Constraint of n <= 10 ^ 5
+Question asks to find the minimum of maximums , maximum of minimums or some minimum/ maximum / at least
+Montonic nature of the problem
+"""
+"""
 conditions for bs:
 1)searching
 2)median without sorting
