@@ -1,4 +1,4 @@
-#rotated bs 
+#rotated bs.
 #[7,8,9,1,2,3,4,5,6]
 #ie rotated at point to use bs on this 
 #first lets check sorted part and check in that
