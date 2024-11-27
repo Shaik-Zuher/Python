@@ -6,7 +6,7 @@
 #mid=(s+e)//2
 #how to check which part sorted nums[start]<nums[mid] so left sorted basically ypu can say that(seriously)
 #now how to check if present in sorted part nums[s]<target<nums[mid] so yes then e=mid-1 else s=mid+1
-###effective if elements unique
+###effective if elements unique.
 #Lets say there are dups.
 #[2,8,9,1,2,3,4,5,2]
 #l                r
