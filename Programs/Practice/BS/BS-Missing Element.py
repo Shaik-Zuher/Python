@@ -18,7 +18,7 @@ arr = [1,2,3,4]
 #now lets say [5,6,7,8] which k=4 element is 4 obvisouly because before 5 we have 4 missing elements
 # 1 2 3 4  5 indexs bcoz numbers startfrom 1
 #[2,3,4,7,11]  for 2 we have 1 missing elemnt for 3 we have missing elemnt.....for 7 we have 3 missing (trick:7(ele)-4(original ele(index+1)))
-# 1 1 1 4 6  missings
+# 1 1 1 4 6  missings.
 k = 6
 #brute force
 def fn(arr, k):
