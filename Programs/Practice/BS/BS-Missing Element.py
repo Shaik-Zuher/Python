@@ -14,7 +14,7 @@ Output: 6
 Explanation: The missing positive integers are [5,6,7,...]. The 2nd missing positive integer is 6.
 """
 arr = [1,2,3,4]
-#originally array must have been [1,2,3,4,5]
+#originally array must have been [1,2,3,4,5].
 #now lets say [5,6,7,8] which k=4 element is 4 obvisouly because before 5 we have 4 missing elements
 # 1 2 3 4  5 indexs bcoz numbers startfrom 1.
 #[2,3,4,7,11]  for 2 we have 1 missing elemnt for 3 we have missing elemnt.....for 7 we have 3 missing (trick:7(ele)-4(original ele(index+1)))
