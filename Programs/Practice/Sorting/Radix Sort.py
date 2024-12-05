@@ -2,7 +2,7 @@
 #here main difference instead of using count sort on number we use it on digits(i.e places)
 #for example [12,1,5,23,670]
 # counting sort in done on digits on ones place on every number
-#[670,1,12,23,5] 1st iteration
+#[670,1,12,23,5] 1st iteration.
 #   - -  -  - -
 #second  time on ones place
 #if no number there considered 0
