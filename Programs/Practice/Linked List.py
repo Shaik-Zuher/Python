@@ -1,6 +1,5 @@
-######LL can be soo tricky but everything is in your imagination
-####IT can mulitple ways just brainstorm
-#linked list and hasmap are related
+#linked lst and hashmap are related
+"""In test cases they will say head is given but check if head is None this is mistake you do most of time"""
 #one powerful algo is hare tortosie mechanism
 #1 2 3 4 5 we have this find middle
 #turtle moves 1 poinet and hare moves 2 points
@@ -23,7 +22,7 @@
 #      t      h --done so hare.next!=Null will gives error so take hare!=Null also
 # so while hare and hare.next:
 ###############################
-#This can be used for lot of things finding loops
+#This can be used for lot of things like finding loops inlinked lists
 #1 2 3(3 once again connected to 1)
 #t
 #h
@@ -121,7 +120,7 @@ class Solution(object):
         return nx
 """"""
 #ll can aso be used to find duplicate numbers
-#if linear not asked then hp can be used so we use ll instead
+#if linear time not asked then hp can be used so we use ll instead
 #think of numbers of nodes as number repeated there is loop for sure
 #Let us deal our list as linked list, where i is connected with nums[i].
 """indices are connected to elements
