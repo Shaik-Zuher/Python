@@ -1,5 +1,5 @@
 ####Queue is used in circular,simulations,dfs,sliding window
-#pop(0) has more complexity so use popleft instead
+#pop(0) has more complexity so use popleft instead.
 #insert takes more time complexity so try to use append/assignment
 #Identification when we have loop i,j and j in dependent on i(range from i to n like this) we can use stacks
 #Sliding window lenght is taken as j-i+1 and stacks j-(i+1) in stacks we want exclusive we want to find length between i and unlike sliding window where we want both i,j
