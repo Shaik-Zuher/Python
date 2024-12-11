@@ -1,5 +1,5 @@
 ##May look similar to asteroid collisons
-####BUT SO F******** ANNOYING  
+####BUT SO F******** ANNOYING.
 #Because here unlike asteroid we have left,right,straight but in astroid we only have left,right 
 #For asteroid we take 2 aarrays left and right but here we take only one
 """
