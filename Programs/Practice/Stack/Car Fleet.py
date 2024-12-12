@@ -52,3 +52,35 @@ class Solution(object):
             elif time[i]>s[-1]:
                 s.append(time[i])
         return len(s)#king of court
+
+#We can even write as following
+class Solution(object):
+    def carFleet(self, target, position, speed):
+        """
+        :type target: int
+        :type position: List[int]
+        :type speed: List[int]
+        :rtype: int
+        """
+        #check time taken for each car
+        #if time taken of one car is less than time taken by next car that means it will meet so this is nge type problem
+        #regaradless of positions we need to reach target so sort them in ascending order
+        #ex:[[0,4],[2,2][4,1]] 7
+        #dist=speed*time -----hehe 
+        #dist=target-position//speed
+        #time:  28      10     3
+        ###fleet =3 because neither of them are less than next
+        paths=[i for i in zip(position,speed)]
+        paths.sort()
+        time=[]
+        for i in paths:
+            cal=(target-i[0])/i[1]#This is important
+            time.append(cal)
+        fleets=0
+        m=0
+        for i in range(len(time)-1,-1,-1):
+            #If  time 3 7 even if car 1 goes in 3 minutes before we have 7 minutes so fleet formed track only largest numbers
+            if m<time[i]:
+                fleet+=1
+                m=time[i]
+        return fleets #king of court
