@@ -2,7 +2,7 @@
 #mmmmmmm   sounds like shit ya but this is bullshit stack becouse of so called min max of every window size and funnily every window size==subaray
 #Yes you got it right it like find sum of mins of subarrays 
 """
-Maximum of minimum for every window size
+Maximum of minimum for every window size.
 
 Given an integer array. The task is to find the maximum of the minimum of every window size in the array.
 Note: Window size varies from 1 to the size of the Array.
