@@ -9,7 +9,7 @@
 ########Important: Sliding window questions will always some condition or 2 inputs.Otherwise it wont be sliding window(rare cases)
 ######## It will have size of window ,some condition,subarray,substring,subsequence
 """
-patterns
+patterns:
 1)fixed window size
 2)longest common substring with condition
 3)no of subarrays with condition
