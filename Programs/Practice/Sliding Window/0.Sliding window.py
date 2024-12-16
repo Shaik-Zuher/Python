@@ -11,7 +11,7 @@
 """
 patterns:
 1)fixed window size
-2)longest common substring with condition
+2)longest common substring with condition.
 3)no of subarrays with condition
 4)minimum subarray with condition
 """
