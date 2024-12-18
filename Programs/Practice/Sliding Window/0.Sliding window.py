@@ -13,7 +13,7 @@ patterns:
 1)fixed window size
 2)longest common substring with condition.
 3)no of subarrays with condition.
-4)minimum subarray with condition
+4)minimum subarray with condition.
 """
 #pattern 4 is not the same as min max sliding window(this is stack)
 """
