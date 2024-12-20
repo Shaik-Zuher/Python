@@ -20,6 +20,8 @@ def sub(arr,k):
             hp[s-k]=r 
     return ml 
 #In hashamp we store prefix sums as our req sum is k we do some revrse maths saying s-k if it is present we take index and distance betwwen index and r is maxlen
+#Basically prefix=[i,j,k]   sum of subarray=[j,k] is sum=prefix[k]-prefix[j-1](prefix[j]+prefix[k] So len is from j not j-1)
+#prefix[k] in prefix track and prefix[j] is past one so saved in hashmap so prefix[j]=prefix[k]-sum so prefix[j] to find in hashmap
 """
 r=0 and arr[r]=-1 s=-1   s-k=-1-3=-4 not there
 hp{ 
