@@ -1,5 +1,5 @@
 """
-Given an array and sum k find longest subarray having sum equal to k
+Given an array and sum k find longest subarray having sum equal to k.
 """
 #On first thought seems easy but nooooooo
 #If it has only positives then we can use normal sliding window
