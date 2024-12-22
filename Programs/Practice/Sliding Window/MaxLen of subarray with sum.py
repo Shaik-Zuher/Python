@@ -16,8 +16,8 @@ def sub(arr,k):
             ml=r+1
         if s-k in hp:
             ml=max(ml,r-hp[s-k])
-        if s-k not in hp:
-            hp[s-k]=r 
+        if s not in hp:
+            hp[s]=r 
     return ml 
 #In hashamp we store prefix sums as our req sum is k we do some revrse maths saying s-k if it is present we take index and distance betwwen index and r is maxlen
 #Basically prefix=[i,j,k]   sum of subarray=[j,k] is sum=prefix[k]-prefix[j-1](prefix[j]+prefix[k] So len is from j not j-1)
