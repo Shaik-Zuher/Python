@@ -3,7 +3,7 @@ Given an array and sum k find longest subarray having sum equal to k.
 """
 #On first thought seems easy but nooooooo.
 #If it has only positives then we can use normal sliding window
-#If has negatives use hashmap(it is somewhat like 2 sum leetcode problem)
+#If has negatives use hashmap(it is somewhat like 2 sum leetcode problem).
 arr=[-1,1,-1,1,1,1,1]
 k=3
 def sub(arr,k):
