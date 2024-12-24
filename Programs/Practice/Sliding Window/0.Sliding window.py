@@ -1,6 +1,6 @@
 #Sliding window lenght is taken as j-i+1 and stacks j-(i+1) in stacks we want exclusive we want to find length between i and unlike sliding window where we want both i,j
 #Sliding window affected by negative numbers crap!!!!
-#String takes more time than list/array.
+#String takes more time than list/array
 #sliding always need not to have some array called as window.It can also be achived with pointers(i.e type of 2 pointers)
 ################sliding window anf hashmap are freqently used but when ever hp[i]==0 make sure delete it  and last longst length condition must always have <= because we need longest someytimes it might be even small
 ################!!!!!!!!! Dont forget ----when hp and cnt used make sure thatcnt is increase hp[s[r]]>-1##########
@@ -9,13 +9,13 @@
 ########Important: Sliding window questions will always some condition or 2 inputs.Otherwise it wont be sliding window(rare cases)
 ######## It will have size of window ,some condition,subarray,substring,subsequence
 """
-patterns:
+patterns
 1)fixed window size
-2)longest common substring with condition.
-3)no of subarrays with condition.
-4)minimum subarray with condition.
+2)longest common substring with condition
+3)no of subarrays with condition
+4)minimum subarray with condition
 """
-#pattern 4 is not the same as min max sliding window(this is stack).
+#pattern 4 is not the same as min max sliding window(this is stack)
 """
 Identify:
 1)some fixed size
@@ -73,7 +73,8 @@ length=0
 s=0
 while r<len(arr):
     s+=arr[r]
-    while s>ss:
+    while l<=r and s>ss:
+        #l<=r not necessary but can be used for safety
         s-=arr[l]
         l+=1
     length=max(length,(r-l+1))#dont forget array is 0 based
@@ -129,7 +130,8 @@ def count(arr,goal):
     s=0
     while j<len(arr):
         s+=arr[j]
-        while s>goal: #if must not be used
+        while i<=j and s>goal: #if must not be used
+            #i<=j no need necesarrily but can be used for safety so whenever testcases fail try this
             s-=arr[i]
             i+=1
         if arr[j]<=goal:
