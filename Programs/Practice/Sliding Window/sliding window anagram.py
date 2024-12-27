@@ -10,7 +10,7 @@ You can return the answer in any order.
 
  Example 1:
 Input: s = "barfoothefoobarman", words = ["foo","bar"]
-Output: [0,9]
+Output: [0,9].
 Explanation:
 The substring starting at 0 is "barfoo". It is the concatenation of ["bar","foo"] which is a permutation of words.
 The substring starting at 9 is "foobar". It is the concatenation of ["foo","bar"] which is a permutation of words.
