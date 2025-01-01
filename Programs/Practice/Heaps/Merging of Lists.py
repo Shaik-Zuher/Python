@@ -7,7 +7,7 @@ Explanation: Above test case has 3 sorted arrays of size 3, 3, 3 arr[][] = [[1, 
 """
 ######Similarly we have merge linked lists--Merge is used there.
 #Merging all lists.
-#There a lot of ways 
+#There a lot of ways.
 #Basic-concate all lists into one list and sort(O(NlogN))
 #Some what better is merge sort(O(NlogN))---good all lists are same size
 #Another heaps+(somewhat graph dfs)(O(NlogK))--good if lists are different sizes
