@@ -18,7 +18,7 @@ It requires sorting
 ####We have top k freqent elements top=biggest=largest(We can use min heap)
 """
 1)Min max element k
-2)priority/event based problems
+2)priority/event based problems/frequency based
 3)median
 4)merging arrays(better than sort when sizes of array not equal)
 """
