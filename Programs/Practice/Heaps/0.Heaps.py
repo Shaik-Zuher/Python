@@ -5,14 +5,18 @@
 #[[0,"a"],[1,"b"],[2,"c"]] like this ......
 #[[0,2],[0,1]] when min heap smallest number at index 0 will be popped if tied then second element is checked.
 """
-
 Identification:
-Min or max element,K
+Min or max element,K.
 It requires sorting
 #There is confusion with binary search(same minumum type problems)
 #Both can be used Time of bs is nlogn(if sort needed) and Time of heap is nlogk
 ######Most important-Whenever we constantly need to sort array after inserting or deleting element and get some largest or smallest elements
       then this heap can be used becoz heap is always sorted even if you insert a new element or delete element
+Patterns:
+1)Top k pattern like find k max etc..
+2)Merge problem 
+3)Two heap problems
+4)Minimum problem(BS and greedy)also
 """
 #Smallest means max heap,largest means min heap
 ####We have top k freqent elements top=biggest=largest(We can use min heap)
@@ -29,6 +33,7 @@ It requires sorting
 Find Kth smallest elemnet in array
 arr=[23,4,5,1,60,22] k=2
 """
+#Pattern Top K pattern
 from heapq import heapify,heappop,heappush
 def ksmall(arr,k):
     ans=[]
