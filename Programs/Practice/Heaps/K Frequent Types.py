@@ -1,15 +1,23 @@
-##Top freqent means biggest.
-#########Heaps can be used on even strings i.e on frequencies of letters in string.
-#basically some sort of frequency related things.
-#heaps always need not to be numbers they can can be lists.
-#[[0,"a"],[1,"b"],[2,"c"]] like this.
+#Top freqent means biggest
+#########Heaps can be used on even strings i.e on frequencies of letters in string
+#basically some sort of frequency related things 
+#heaps always need not to be numbers they can can be lists
+#[[0,"a"],[1,"b"],[2,"c"]] like this
 """
-In frequency-
+In frequency
 for example create a string with following elements a=7,b=3,c=1 where all elements must be in string and 2 strings not beside
 we starting building string with letter with most freq so we can create longest possible string
 a->ab(because a already used next most freq)->aba(once again a) like this
-if we create with other letter ex:c->cabababa(not all a used right so not possible and good).
+if we create with other letter ex:c->cabababa(not all a used right so not possible and good)
 So heap can have anything be it [freq,ele] or[diff,ele] anything....
+"""
+#Organize string "aab" such that no 2 two are adjacent
+"""
+heap=[[-2,"a"],[-1,"b"]]
+res=""  pop freq one res="a" and heap=[["-1,a"],[-1,"b"]]
+once again pop=a
+I dont want adj so check res[-1]==pop(keep it aside) then pop some other element and add to res
+Don't forget to pushing back to heap and stop pushing when freq==0
 """
 #hashmaps and heaps are also related seriouly hashmap related with lot of things man
 """
