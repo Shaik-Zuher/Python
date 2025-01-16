@@ -159,3 +159,67 @@ class Solution(object):
                 heappush(pq,[nums1[a[1]]+nums2[new],a[1],new])
         return ans
 #Similar one is sum of max combinations 
+'''getting somw what hard'''
+"""
+1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
+
+You are given an m x n matrix mat that has its rows sorted in non-decreasing order and an integer k.
+You are allowed to choose exactly one element from each row to form an array.
+Return the kth smallest array sum among all possible arrays.
+
+Example 1:
+Input: mat = [[1,3,11],[2,4,6]], k = 5
+Output: 7
+Explanation: Choosing one element from each row, the first k smallest sum are:
+[1,2], [1,4], [3,2], [3,4], [1,6]. Where the 5th sum is 7.
+Example 2:
+Input: mat = [[1,3,11],[2,4,6]], k = 9
+Output: 17
+Example 3:
+Input: mat = [[1,10,10],[1,4,5],[2,3,6]], k = 7
+Output: 9
+Explanation: Choosing one element from each row, the first k smallest sum are:
+[1,1,2], [1,1,3], [1,4,2], [1,4,3], [1,1,6], [1,5,2], [1,5,3]. Where the 7th sum is 9.  
+ 
+Constraints:
+m == mat.length
+n == mat.length[i]
+1 <= m, n <= 40
+1 <= mat[i][j] <= 5000
+1 <= k <= min(200, nm)
+mat[i] is a non-decreasing array.
+"""
+#If said get kth smallest we can either use binary search or heap(merge pattern)
+#This is min sum thing in matrix
+#I will use min sum of 2 arrays as sub problem
+#We have 0 1 2 rows i will use that problem on 0 1 and store in 1 and then use it on 1 2 and store 2 return mat[-1].pop()(last row)
+class Solution(object):
+    def kthSmallest(self, mat, k):
+        """
+        :type mat: List[List[int]]
+        :type k: int
+        :rtype: int
+        """
+        def merger(a,b):
+            ans=[]
+            pq=[]
+            heappush(pq,[a[0]+b[0],0,0])
+            s=set()
+            while len(ans)<k and pq: #len(ans)<k but not len(a) or len(mat[0]) becuse we can even have k=10 but n=3 thats why
+                p=heappop(pq)
+                ans.append(p[0])
+                if p[1]+1<len(a):
+                    new=p[1]+1
+                    if (new,p[2]) not in s:
+                        heappush(pq,[a[new]+b[p[2]],new,p[2]])
+                        s.add((new,p[2]))
+                if p[2]+1<len(b):
+                    new=p[2]+1
+                    if (p[1],new) not in s:
+                        heappush(pq,[a[p[1]]+b[new],p[1],new])
+                        s.add((p[1],new))
+            return ans
+        temp=mat[:]
+        for i in range(1,len(mat)):
+            temp[i]=merger(temp[i-1],temp[i])
+        return temp[-1].pop()
