@@ -1,11 +1,12 @@
 ##This is minimum type pattern problem which is actually soooo crappy
 #Maybe because it always comes with greedy concept This pattern is what which is equal to binary search.
-#####This can be identified in question it shown somewhat like priority like i only want latest until current point(gas station refuel) or I want samllest until this point(meeting rooms)
-#These pattern usually depend on gut feeling or intitution  and these problems always involve sorting of elemnent
+#####This can be identified in question it shown somewhat like tasks have priority(sheduling type problems) like i only want latest until current point(gas station refuel) or I want samllest until this point(meeting rooms)
+#These pattern usually depend on gut feeling or intitution  and these problems always involve sorting of elemnents
 """"""
 #In this problem some can only be solved with heap not binary search identify is constarint for bs it is 10^5
 ##Pattern i observed is like it same as other heap we want some small/big +k what differnt is it usually cntains some 2 arrays or single 2D array like this.
 """Once again saying it requires sorting"""
+#We have to combine two arrays are 2 d array and sort them maxx all cases
 """
 Meeting rooms2
 
@@ -155,5 +156,58 @@ class Solution(object):
             startFuel+=-heappop(time_travel)
             ans+=1
         return ans
+"""
+Course Shedule III
+There are n different online courses numbered from 1 to n. You are given an array courses where courses[i] = [durationi, lastDayi] indicate that the ith course should be taken continuously for durationi days and must be finished before or on lastDayi.
+You will start on the 1st day and you cannot take two or more courses simultaneously.
+Return the maximum number of courses that you can take.
 
-                
+Example 1:
+Input: courses = [[100,200],[200,1300],[1000,1250],[2000,3200]]
+Output: 3
+Explanation: 
+There are totally 4 courses, but you can take 3 courses at most:
+First, take the 1st course, it costs 100 days so you will finish it on the 100th day, and ready to take the next course on the 101st day.
+Second, take the 3rd course, it costs 1000 days so you will finish it on the 1100th day, and ready to take the next course on the 1101st day. 
+Third, take the 2nd course, it costs 200 days so you will finish it on the 1300th day. 
+The 4th course cannot be taken now, since you will finish it on the 3300th day, which exceeds the closed date.
+Example 2:
+Input: courses = [[1,2]]
+Output: 1
+Example 3:
+Input: courses = [[3,2],[4,3]]
+Output: 0
+
+Constraints:
+1 <= courses.length <= 104
+1 <= durationi, lastDayi <= 104
+"""
+#Think this as task sheduling
+#For example you have 3 tasks to do 1)use phone(5hr,within 10 hours) 2)eat (1 hr,within 7 hrs) 3)go to school(12 hr,within 13hr)
+#Let say i go to school  it takes 12 hrs after i cant use phone/eat becuse time over
+#So lets say instead of going to school eat because deadline 7 hrs complted hr=1 
+#then use phone complte+phone hr=1+5=6 within 10 hours
+#then go to school complete+school=6+12=18>deadline
+####What will you do go to school(1 task) else do 2 tasks
+''''''
+#So for example i first did phone 5 hours then go to school 5+12=17<13(deadline) but cant eat(1 hour)
+#So i will instead remove long time task and do this task okay but if the task I'm going to do takes more time than longest task which I did then nope i will never do it who will longest tasks
+####So basically i will do fast tasks boom boom boom
+class Solution(object):
+    def scheduleCourse(self, courses):
+        """
+        :type courses: List[List[int]]
+        :rtype: int
+        """
+        did=[]
+        l=[[i[1],i[0]] for i in courses]
+        l.sort()
+        time=0
+        for i in l:
+            if time+i[1]<=i[0]:
+                time+=i[1] #Doing tasks casually
+                heappush(did,-i[1])
+            elif did and -did[0]>i[1]:# i will only do if task takes less time than already done longest one
+                time+=heappop(did)+i[1] #I wont do longest task instead i will now task which is small
+                heappush(did,-i[1])
+        return len(did)
