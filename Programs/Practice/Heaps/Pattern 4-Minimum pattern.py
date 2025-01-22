@@ -7,6 +7,40 @@
 ##Pattern i observed is like it same as other heap we want some small/big +k what differnt is it usually cntains some 2 arrays or single 2D array like this.
 """Once again saying it requires sorting"""
 #We have to combine two arrays are 2 d array and sort them maxx all cases
+#These Type of problems start with brute force
+#Then think greedily what I want like- Maximum hire k workers---i want to take workers with max ratio and qualities will be heaped
+#                                      Maximum subsequence score--I want to maximize both sum and min but i will try to maximize min first and then on sum
+#                                      Cousre Shedule--- I want to do tasks which end fastly
+"""
+Lets say about maximum subsequence score i.e i will have 2 arrays a=[1,2,2,3] b=[1,2,3,5] i want k=3 numbers from a and b (same indices)
+ans=sum(k numbers from a)*min(k numbers from b)
+#As usual 2 arrays combined into one [[1,1],[2,2],[2,3],[3,5]]
+First i Will think to maximize minimum so sort based on b
+                   [[3,5],[2,3],[2,2],[1,1]]
+let say minimum      |This one so min=5  and sum=(_+_+3(curr index)) I want 2 more if I choose any elemnt on right my min will change because sorted 
+                       So definately have to choose from left side of current index(Nothing can be choosen) change min
+Now min                    |(still cant be choosen) sum=(_+2+3)
+Now                              | so min=2 and sum=(3+2+2)all ans=14
+Now min                                |  so min =1 and before adding current index i need to free something from sum
+                                           I want to maximize sum so will remove small (MIN heap can used!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!)
+                                           ans=1(min)*9(sum of top k with curr index)
+Do understand better see code below
+Same with hire minimum k workers  i have quality array=[2,3,4] min_wage=[9,1,1](min salary def paid) k=2 choose k workers so that ratio of quality and wage will give min salary
+ratio=quality[i]/wage[i]=quality[j]/wage[j]
+Take ratio=[2/9=0.2,3,4] Say if I choose worker=2(ratio 0.9) and choose worker(quality)=3 ratio(3) so i need to pay him amount as 0.9 times=1/0.9(formula)=0.0009 but min wage must be 1 so I can't choose worker=2
+                         Choose worker=3(ratio 3) nxt 1)choose worker=2 his wage=2/3=0.6< his min_wage
+                                                      2)Else choose worker=4 his wage=4/3=1.3>min_wage ans=3+1.3=4.3
+                         Choose worker=4(ratio 4) nxt 1)Choose worker=2 his wage=2/4=0.5<min_wage
+                                                      2)Choose worker=3 his wage=3/4=0.25<min_wage
+From what observed ratio(larger) means better k choosing with minimum amount
+So sort based on ratio,quality
+                       [[0.2,2],[3,3],[4,4]]
+#Let say i will def      |(choose this) k-1 small ratio nothing skip
+                                  | choose(3,2)   ratio<min_wage skip
+                                        | choose(3) and k-1 i want to choose with big quality so remove small one i.e 2(Min heap again!!!!!!!!!!!!!!!!!!!!!!!!)
+                        This is answer like this you can find heaps minimum pattern
+"""
+####
 """
 Meeting rooms2
 
