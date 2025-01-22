@@ -37,7 +37,7 @@ So sort based on ratio,quality
                        [[0.2,2],[3,3],[4,4]]
 #Let say i will def      |(choose this) k-1 small ratio nothing skip
                                   | choose(3,2)   ratio<min_wage skip
-                                        | choose(3) and k-1 i want to choose with big quality so remove small one i.e 2(Min heap again!!!!!!!!!!!!!!!!!!!!!!!!)
+                                        | choose(3) and k-1 i want to choose with small quality so remove big one i.e 3(Max heap again!!!!!!!!!!!!!!!!!!!!!!!!)
                         This is answer like this you can find heaps minimum pattern
                         Optimize ==(quality1*large(ratio)+quality2*large(ratio))=ratio(quality1+quality2)
                         #This is optimization
