@@ -39,6 +39,8 @@ So sort based on ratio,quality
                                   | choose(3,2)   ratio<min_wage skip
                                         | choose(3) and k-1 i want to choose with big quality so remove small one i.e 2(Min heap again!!!!!!!!!!!!!!!!!!!!!!!!)
                         This is answer like this you can find heaps minimum pattern
+                        Optimize ==(quality1*large(ratio)+quality2*large(ratio))=ratio(quality1+quality2)
+                        #This is optimization
 """
 ####
 """
