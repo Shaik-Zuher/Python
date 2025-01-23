@@ -15,7 +15,7 @@
 Lets say about maximum subsequence score i.e i will have 2 arrays a=[1,2,2,3] b=[1,2,3,5] i want k=3 numbers from a and b (same indices)
 ans=sum(k numbers from a)*min(k numbers from b)
 #As usual 2 arrays combined into one [[1,1],[2,2],[2,3],[3,5]]
-First i Will think to maximize minimum so sort based on b
+First i Will think to maximize minimum so descending sort based on b(for min)
                    [[3,5],[2,3],[2,2],[1,1]]
 let say minimum      |This one so min=5  and sum=(_+_+3(curr index)) I want 2 more if I choose any elemnt on right my min will change because sorted 
                        So definately have to choose from left side of current index(Nothing can be choosen) change min
@@ -42,7 +42,162 @@ So sort based on ratio,quality
                         Optimize ==(quality1*large(ratio)+quality2*large(ratio))=ratio(quality1+quality2)
                         #This is optimization
 """
-####
+###########
+"""
+2542. Maximum Subsequence Score
+You are given two 0-indexed integer arrays nums1 and nums2 of equal length n and a positive integer k. You must choose a subsequence of indices from nums1 of length k.
+For chosen indices i0, i1, ..., ik - 1, your score is defined as:
+The sum of the selected elements from nums1 multiplied with the minimum of the selected elements from nums2.
+It can defined simply as: (nums1[i0] + nums1[i1] +...+ nums1[ik - 1]) * min(nums2[i0] , nums2[i1], ... ,nums2[ik - 1]).
+Return the maximum possible score.
+A subsequence of indices of an array is a set that can be derived from the set {0, 1, ..., n-1} by deleting some or no elements.
+
+Example 1:
+Input: nums1 = [1,3,3,2], nums2 = [2,1,3,4], k = 3
+Output: 12
+Explanation: 
+The four possible subsequence scores are:
+- We choose the indices 0, 1, and 2 with score = (1+3+3) * min(2,1,3) = 7.
+- We choose the indices 0, 1, and 3 with score = (1+3+2) * min(2,1,4) = 6. 
+- We choose the indices 0, 2, and 3 with score = (1+3+2) * min(2,3,4) = 12. 
+- We choose the indices 1, 2, and 3 with score = (3+3+2) * min(1,3,4) = 8.
+Therefore, we return the max score, which is 12.
+Example 2:
+Input: nums1 = [4,2,3,1,1], nums2 = [7,5,10,9,6], k = 1
+Output: 30
+Explanation: 
+Choosing index 2 is optimal: nums1[2] * nums2[2] = 3 * 10 = 30 is the maximum possible score.
+ 
+Constraints:
+n == nums1.length == nums2.length
+1 <= n <= 105
+0 <= nums1[i], nums2[j] <= 105
+1 <= k <= n
+"""
+#Explain
+"""
+Lets say about maximum subsequence score i.e i will have 2 arrays a=[1,2,2,3] b=[1,2,3,5] i want k=3 numbers from a and b (same indices)
+ans=sum(k numbers from a)*min(k numbers from b)
+#As usual 2 arrays combined into one [[1,1],[2,2],[2,3],[3,5]]
+First i Will think to maximize minimum so sort based on b
+                   [[3,5],[2,3],[2,2],[1,1]]
+let say minimum      |This one so min=5  and sum=(_+_+3(curr index)) I want 2 more if I choose any elemnt on right my min will change because sorted 
+                       So definately have to choose from left side of current index(Nothing can be choosen) change min
+Now min                    |(still cant be choosen) sum=(_+2+3)
+Now                              | so min=2 and sum=(3+2+2)all ans=14
+Now min                                |  so min =1 and before adding current index i need to free something from sum
+                                           I want to maximize sum so will remove small (MIN heap can used!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!)
+                                           ans=1(min)*9(sum of top k with curr index)
+"""
+#Answer 2 pass
+from heapq import *
+class Solution(object):
+    def maxScore(self, nums1, nums2, k):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :type k: int
+        :rtype: int
+        """
+        #maximize minimum nums2
+        #sort in desc based on nums2
+        store=[[nums2[i],nums1[i]] for i in range(len(nums1))]
+        store.sort(reverse=True)
+        #I will consider one one value as minimum which is maximum
+        #Okay one will be take what about remaining k-1 but i cant take from right else min will change nothing from left(in beginning) so first value cant be min
+        #Atleast need to have k values and k will be min
+        pq=[]
+        m=-1 #my min 
+        s=0 #sum
+        for i in range(k):
+            s+=store[i][1]
+            m=store[i][0]
+            heappush(pq,store[i][1])
+        res=m*s 
+        for i in range(k,len(nums1)):
+            s+=store[i][1]
+            #before adding next remove small one
+            m=store[i][0]
+            s-=heappop(pq)
+            res=max(res,m*s)
+        return res
+#One pass(loops reduced to one)
+class Solution(object):
+    def maxScore(self, nums1, nums2, k):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :type k: int
+        :rtype: int
+        """
+        #maximize minimum nums2
+        #sort in desc based on nums2
+        store=[[nums2[i],nums1[i]] for i in range(len(nums1))]
+        store.sort(reverse=True)
+        pq=[]
+        m=-1
+        res=-1
+        s=0
+        for i in store:
+            #add until k
+            #after len==k check res
+            #remove small --next iteration will work right
+            if len(pq)==k:
+                s-=heappop(pq)
+            m=i[0]
+            s+=i[1]
+            heappush(pq,i[1])
+            if len(pq)==k:
+                res=max(res,m*s)
+        return res
+#Same format question  small differnce
+"""
+1383. Maximum Performance of a Team
+
+You are given two integers n and k and two integer arrays speed and efficiency both of length n. There are n engineers numbered from 1 to n. speed[i] and efficiency[i] represent the speed and efficiency of the ith engineer respectively.
+Choose at most k different engineers out of the n engineers to form a team with the maximum performance.
+The performance of a team is the sum of its engineers' speeds multiplied by the minimum efficiency among its engineers.
+Return the maximum performance of this team. Since the answer can be a huge number, return it modulo 109 + 7.
+
+Example 1:
+Input: n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 2
+Output: 60
+Explanation: 
+We have the maximum performance of the team by selecting engineer 2 (with speed=10 and efficiency=4) and engineer 5 (with speed=5 and efficiency=7). That is, performance = (10 + 5) * min(4, 7) = 60.
+Example 2:
+Input: n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 3
+Output: 68
+Explanation:
+This is the same example as the first but k = 3. We can select engineer 1, engineer 2 and engineer 5 to get the maximum performance of the team. That is, performance = (2 + 10 + 5) * min(5, 4, 7) = 68.
+Example 3:
+Input: n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 4
+Output: 72
+"""
+#Read question carfully atleast k so we can even have less<k elements
+class Solution(object):
+    def maxPerformance(self, n, speed, efficiency, k):
+        """
+        :type n: int
+        :type speed: List[int]
+        :type efficiency: List[int]
+        :type k: int
+        :rtype: int
+        """
+        store=[[efficiency[i],speed[i]] for i in range(n)]
+        store.sort(reverse=True)
+        pq=[]
+        m=-1
+        res=-1
+        s=0
+        for i in store:
+            m=i[0]
+            s+=i[1]
+            heappush(pq,i[1])
+            res=max(res,m*s)#Res must be done everytime because atleast k boom boom
+            if len(pq)==k:
+                res=max(res,m*s)
+                s-=heappop(pq)
+        return res
 """
 Meeting rooms2
 
@@ -69,7 +224,6 @@ We add end time of a training session to the PriorityQueue.
 """
 #First iterate through intervals and add to heap but before that check if any room in heap is becoming free(usually check shortest time room)
 #If we short time room is below current room remove the short time room and add current one soooo good
-from heapq import *
 class Solution:
     def minMeetingRooms(self, start, end):
         intervals=[[start[i],end[i]] for i in range(len(start))]
