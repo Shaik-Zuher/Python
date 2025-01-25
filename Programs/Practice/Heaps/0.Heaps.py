@@ -30,6 +30,22 @@ Patterns:
 ##ex: we want 3rd min element brute force is sort arr and find the 3rd index
 #Plan comes we need only 3 elements why sort whole array waste of time and space so we use heap which will have constant size 3
 #Find small - use max heap, Find big - use min heap
+#Heaps have most odd behaviour sometimes it feels like when you heapify arr is sorted and sometimes not
+"""
+Lets say for example you are said to find max elemnt in heap after adding every elemnt
+for example i am given sorted array=[1,2,3] max=m=3 now
+after heapify and adding 4 now max must be 4 how to check
+You can check if max(m,array[-1]) #cause in heap will be sorted you might think like that but wrong actullay it contains most rcently inserted elemnt 
+but next time when popped it return min and then set itself in order
+###3So m=max(m,arr[-1]) is right but m=arr[-1] wrong
+Small tip:::::::::
+Now you are doing first add you already know your max till now
+Now adding you are adding only one element so why cant you do m=max(m,4(the elemnt you are adding)) instead of arr[-1]
+Its more better right
+Cause you only add one elemnt you already know max check if that is small or big
+If you add 2 you max is 4
+m=max(4,2(ele adding))--No change use it
+"""
 """
 Find Kth smallest elemnet in array
 arr=[23,4,5,1,60,22] k=2
