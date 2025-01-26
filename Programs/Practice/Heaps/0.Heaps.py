@@ -1,5 +1,5 @@
 #Heaps can be many sometimes tree or queue
-#Heap is tree like structure in which root node is either most maximum or most mimimum
+#Heap is tree like structure in which root node is either most maximum or most mimimum.
 #To help the coder it is made to look like priority queue(abstraction)
 #heaps always need not to be numbers they can can be lists
 #[[0,"a"],[1,"b"],[2,"c"]] like this
