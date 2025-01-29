@@ -1,4 +1,4 @@
-##This is minimum type pattern problem which is actually soooo crappy.
+##This is minimum type pattern problem which is actually soooo crappy
 #Maybe because it always comes with greedy concept This pattern is what which is equal to binary search.
 #####This can be identified in question it shown somewhat like tasks have priority(sheduling type problems) like i only want latest until current point(gas station refuel) or I want samllest until this point(meeting rooms)
 #These pattern usually depend on gut feeling or intitution  and these problems always involve sorting of elemnents
@@ -11,6 +11,9 @@
 #Then think greedily what I want like- Maximum hire k workers---i want to take workers with max ratio and qualities will be heaped
 #                                      Maximum subsequence score--I want to maximize both sum and min but i will try to maximize min first and then on sum
 #                                      Cousre Shedule--- I want to do tasks which end fastly
+"""
+######################For this problem you can use while or for loop must only to length of array nothing ever
+"""
 """
 Lets say about maximum subsequence score i.e i will have 2 arrays a=[1,2,2,3] b=[1,2,3,5] i want k=3 numbers from a and b (same indices)
 ans=sum(k numbers from a)*min(k numbers from b)
