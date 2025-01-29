@@ -1,4 +1,5 @@
 ##This is minimum type pattern problem which is actually soooo crappy
+#Rememebr most interval type questions are this pattern
 #Maybe because it always comes with greedy concept This pattern is what which is equal to binary search.
 #####This can be identified in question it shown somewhat like tasks have priority(sheduling type problems) like i only want latest until current point(gas station refuel) or I want samllest until this point(meeting rooms)
 #These pattern usually depend on gut feeling or intitution  and these problems always involve sorting of elemnents
