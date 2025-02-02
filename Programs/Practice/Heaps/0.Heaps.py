@@ -47,6 +47,22 @@ Cause you only add one elemnt you already know max check if that is small or big
 If you add 2 you max is 4
 m=max(4,2(ele adding))--No change use it
 """
+#Deletion in heap
+"""
+Use remove like array and then heapify(fix structure)
+Time-O(n)+O(k) usually big complexity 
+Instead there is method called lazy removal
+i.e heap=[3,4,5]
+if i want to remove 5 I will store it in hashmap mp={5:1}
+I consider that element is removed already(assumption)
+I casully perform ops
+heap=[4,5] #heappop
+heap=[4,8,5] #heappush(8)
+heap=[5,8] #heappop()
+Now when heappop i will check if heap[0] in lazy and then remove it my decrement count in map
+##So i will remove the elements when that element is blocking my passage in heap
+#hashmap used instead of set is becuse of dups i may wnat to remove 2 5s do mp{5:2} right when count==0 we must remove from map
+"""
 """
 Find Kth smallest elemnet in array
 arr=[23,4,5,1,60,22] k=2
