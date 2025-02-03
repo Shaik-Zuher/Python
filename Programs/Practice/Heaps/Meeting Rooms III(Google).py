@@ -177,3 +177,25 @@ class Solution(object):
             elif ans[i]==m:
                 a=min(a,i)
         return a
+"""
+Epliogue:
+similar pattern is task shedler,process for tasks servers
+#Check with delayed deque if doesnt work then try removing it
+#Another point is delayed deque is better when we have fixed time(delay) like task sheduler where time+k(constant)
+#Unlike meeting rooms or process for tasks where delay is not fixed                               time task
+for example tasks[4,7,2] [1] server so 4 uses server until time=4 7 is delayed until time 4 delay=[8,7] and at t=3 2 will be blocked for [6,2] so blecked=[[8,7],[6,2]] when blocked need small but [8,7] not small right
+                  0 1 2 aded baased on index
+###In this type of problem check backlogging case
+#For example all roons or servers are busy and at particular task all become free then which room to choose
+Ex: servers=[1,2,300]  task=[10,9,8,1,1,1]
+Here task 10 at time 0 takes server 1 until 10
+     task 9 at time 1 taskes server 2 until 10
+     task 8 at time2 takes server 300 until 10
+     at time 3 no rooms empty so instead blck it
+     at time 10 all become empty  and task1(index 3) goes to server 1
+     at time 11 server 1 is free and task 1(ineex 4) goes to server 1 which is mistake as time for tasks is over as soon servers they must occupy al
+
+Another thing when loop  depends on length of array i then dont ever use deque
+Use deque when you dont have to worry about i(index of array)
+In task sheduler we store all values in pq and run loop until pq is empty so deque no problem
+"""
