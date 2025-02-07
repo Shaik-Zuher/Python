@@ -10,7 +10,7 @@ void unfollow(int followerId, int followeeId) The user with ID followerId starte
  
 
 Example 1:
-Input
+Input.
 ["Twitter", "postTweet", "getNewsFeed", "follow", "postTweet", "getNewsFeed", "unfollow", "getNewsFeed"]
 [[], [1, 5], [1], [1, 2], [2, 6], [1], [1, 2], [1]]
 Output
