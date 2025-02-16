@@ -4,7 +4,7 @@
 #heaps always need not to be numbers they can can be lists.
 #[[0,"a"],[1,"b"],[2,"c"]] like this.
 #[[0,2],[0,1]] when min heap smallest number at index 0 will be popped if tied then second element is checked.
-#########Heap is not sorted at all
+#########Heap is not sorted at all.
 """
 Identification:
 Min or max element,K
