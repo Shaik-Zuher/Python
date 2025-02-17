@@ -7,7 +7,7 @@
 #########Heap is not sorted at all.
 """
 Identification:
-Min or max element,K
+Min or max element,K.
 It requires sorting
 #There is confusion with binary search(same minumum type problems)
 #Both can be used Time of bs is nlogn(if sort needed) and Time of heap is nlogk
