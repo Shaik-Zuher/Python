@@ -10,7 +10,7 @@ Identification:
 Min or max element,K.
 It requires sorting
 #There is confusion with binary search(same minumum type problems)
-#Both can be used Time of bs is nlogn(if sort needed) and Time of heap is nlogk
+#Both can be used Time of bs is nlogn(if sort needed) and Time of heap is nlogk.
 ######Most important-Whenever we constantly need to sort array after inserting or deleting element and get some largest or smallest elements
       then this heap can be used becoz heap is always sorted even if you insert a new element or delete element
 
