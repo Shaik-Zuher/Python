@@ -1,5 +1,5 @@
 """
-2940. Find Building Where Alice and Bob Can Meet
+2940. Find Building Where Alice and Bob Can Meet.
 You are given a 0-indexed array heights of positive integers, where heights[i] represents the height of the ith building.
 If a person is in building i, they can move to any other building j if and only if i < j and heights[i] < heights[j].
 You are also given another array queries where queries[i] = [ai, bi]. On the ith query, Alice is in building ai while Bob is in building bi.
