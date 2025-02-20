@@ -223,3 +223,62 @@ class Solution(object):
         for i in range(1,len(mat)):
             temp[i]=merger(temp[i-1],temp[i])
         return temp[-1].pop()
+
+#This is hard problem
+"""
+2386. Find the K-Sum of an Array
+
+You are given an integer array nums and a positive integer k. You can choose any subsequence of the array and sum all of its elements together.
+We define the K-Sum of the array as the kth largest subsequence sum that can be obtained (not necessarily distinct).
+Return the K-Sum of the array.
+A subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
+Note that the empty subsequence is considered to have a sum of 0.
+
+Example 1:
+Input: nums = [2,4,-2], k = 5
+Output: 2
+Explanation: All the possible subsequence sums that we can obtain are the following sorted in decreasing order:
+- 6, 4, 4, 2, 2, 0, 0, -2.
+The 5-Sum of the array is 2.
+Example 2:
+
+Input: nums = [1,-2,3,4,-10,12], k = 16
+Output: 10
+Explanation: The 16-Sum of the array is 10
+
+n == nums.length
+1 <= n <= 105
+-109 <= nums[i] <= 109
+1 <= k <= min(2000, 2n)
+"""
+#You might not get pattern but k sum means we have to use merge one but how we need to fix array to use merge one
+#Lets be greedy max possible sum is sum of all elelments but array has neg so sum of all positives
+#Next what might be next max i.e max-small(array) as array has neg make whole array absolute 
+#Cause i am gonna use maxheap=[-(sums-array[0])] even if the positive is added the elemnt is maxheap will end being postive due to larger and eventually removed
+######Subsequence means 2 cases 1)remove current elemnet(exclude) 2)include this and exclude next one(include)
+#######case 1: sum-array[i]   case2:sum+array[i]-array[i-1]
+from heapq import *
+class Solution(object):
+    def kSum(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        s=0
+        for i in range(len(nums)):
+            if nums[i]>0:
+                s+=nums[i]
+            nums[i]=abs(nums[i])
+        nums.sort()
+        pq=[]
+        heappush(pq,[-(s-nums[0]),0])
+        ans=[s]#current sum is biggest possible
+        while len(ans)<k:
+            a=heappop(pq)
+            ans.append(-a[0])
+            a[1]+=1
+            if a[1]<len(nums):
+                heappush(pq,[-(-a[0]-nums[a[1]]),a[1]])
+                heappush(pq,[-(-a[0]+(nums[a[1]-1])-nums[a[1]]),a[1]])
+        return ans[-1]
