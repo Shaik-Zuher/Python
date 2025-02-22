@@ -1,4 +1,4 @@
-#When ever we have something called as immediate next higher or next greatest we can definietly use mono stack or heap
+#When ever we have something called as immediate next higher or next greatest we can definietly use mono stack or heap.
 
 """
 2940. Find Building Where Alice and Bob Can Meet
