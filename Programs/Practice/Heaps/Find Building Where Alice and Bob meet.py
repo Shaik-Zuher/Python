@@ -1,5 +1,4 @@
 #When ever we have something called as immediate next higher or next greatest we can definietly use mono stack or heap.
-
 """
 2940. Find Building Where Alice and Bob Can Meet
 You are given a 0-indexed array heights of positive integers, where heights[i] represents the height of the ith building.
