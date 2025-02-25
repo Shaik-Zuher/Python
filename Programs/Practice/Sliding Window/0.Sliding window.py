@@ -144,3 +144,9 @@ print(count(arr,goal)-count(arr,goal-1))
 4.Minmum window problems
 same as 2nd pattern but somewhat different
 """
+#In some problems you are asked to return substing of another string in other fashion whne we have use of 2 hps 
+#and chceking condition like mp==hp instead of mainatining 2 maps decrement the values in single map
+#Example: hp={a:1 b:2} and s[j]=b then make hp[s[j]]-=1 and cnt+=1 which is lot better becuause otherwise need to check lot of edge cases
+#example t="ABC" and s="CCAB" and tell use return substring t in s if we check 2 maps and hp==mp
+#mp={A:1,B:1,C:1} and s={C:2,B:1,A:1} we wont get answer because we can have exact or more occurances of elemnts in t
+#we need to increment cnt based on hp[s[i]]<=mp[s[i]] otherwise it will be disaster
