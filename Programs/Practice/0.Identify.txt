@@ -9,7 +9,7 @@ First Level Questions (Basic Pattern Recognition):
 # 2. Is it about searching? Consider:
    - Binary Search (sorted data)
    - DFS (paths, tree/graph exploration)
-   - BFS (shortest path, level-order)
+   - BFS (shortest path, level-order).
 
 # 3. Is it about optimization? Consider:
    - Dynamic Programming (optimal value problems)
