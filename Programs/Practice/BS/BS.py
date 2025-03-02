@@ -1,4 +1,10 @@
-#rotated bs.
+"""
+Minimum type problems we can even use heap or greedy but bs only possible when constraint is 10^5 other wise wont be bs
+
+Tip: When ever minimum is given in question first see if there is any monotoic nature
+If no check greddy am i choose what is best while making decision--After that check heap(Because greedy comes with heap most time)
+"""
+#rotated bs 
 #[7,8,9,1,2,3,4,5,6]
 #ie rotated at point to use bs on this 
 #first lets check sorted part and check in that
@@ -6,8 +12,8 @@
 #mid=(s+e)//2
 #how to check which part sorted nums[start]<nums[mid] so left sorted basically ypu can say that(seriously)
 #now how to check if present in sorted part nums[s]<target<nums[mid] so yes then e=mid-1 else s=mid+1
-###effective if elements unique.
-#Lets say there are dups.
+###effective if elements unique
+#Lets say there are dups
 #[2,8,9,1,2,3,4,5,2]
 #l                r
 #here nums[left]=nums[mid]=nums[right]
@@ -20,8 +26,6 @@
 #In find min type problems there might be confusion whether bs/heap/greedy bs-sorted heap-priority greedy-decisions. You can use anything
 """
 Generally, we identify that binary search is applicable with 3 conditions :
-
-
 Constraint of n <= 10 ^ 5
 Question asks to find the minimum of maximums , maximum of minimums or some minimum/ maximum / at least
 Montonic nature of the problem
