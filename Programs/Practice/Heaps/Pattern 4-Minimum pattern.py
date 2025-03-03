@@ -1,9 +1,12 @@
-##This is minimum type pattern problem which is actually soooo crappy.
+##This is minimum type pattern problem which is actually soooo crappy
 #Rememebr most interval type questions are this pattern
 #Maybe because it always comes with greedy concept This pattern is what which is equal to binary search.
 #####This can be identified in question it shown somewhat like tasks have priority(sheduling type problems) like i only want latest until current point(gas station refuel) or I want samllest until this point(meeting rooms)
 #These pattern usually depend on gut feeling or intitution  and these problems always involve sorting of elemnents
-""""""
+"""
+Tip: When ever minimum is given in question first see if there is any monotoic nature
+If no check greddy am i choose what is best while making decision--After that check heap(Because greedy comes with heap most time)
+"""
 #In this problem some can only be solved with heap not binary search identify is constarint for bs it is 10^5
 ##Pattern i observed is like it same as other heap we want some small/big +k what differnt is it usually cntains some 2 arrays or single 2D array like this.
 """Once again saying it requires sorting"""
