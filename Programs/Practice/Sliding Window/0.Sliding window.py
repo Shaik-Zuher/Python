@@ -134,7 +134,7 @@ def count(arr,goal):
             #i<=j no need necesarrily but can be used for safety so whenever testcases fail try this
             s-=arr[i]
             i+=1
-        if arr[j]<=goal:
+        if arr[j]<=goal:######When while there please never use if Process when while there first try 1)If passes good 2) Else remove if
             c+=(j-i+1)  #like this becuse [1] 1 elemnt added  [1,2] has [1][2][1,2] alredy [1] is added we need to [2][2,3]==length.....
         j+=1
     return c 
