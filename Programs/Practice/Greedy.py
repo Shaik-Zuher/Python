@@ -4,10 +4,10 @@
 #Like i always say minimum can be bs,heap,greedy,dp.
 """
 Tip: When ever minimum is given in question first see if there is any monotoic nature(BS).
-If no check greddy am i choose what is best while making decision--After that check heap(Because greedy comes with heap most time)
+If no check greedy am i choose what is best while making decision--After that check heap(Because greedy comes with heap most time).
 """
 #Dp min can be different as contraints will be always small around 200 like this seriously
-#Main point is in dp we break into sub problems and keep solving sub problems.
+#Main point is in dp we break into sub problems and keep solving sub problems
 #While greedy is selecting optimally if we have something better then that is my answer I dont care about future
 #On other hand dp is even if i get answer i will leave it cause i know there can be something even better(Like rejecting deloite)
 """
@@ -17,7 +17,7 @@ Greedy Algorithms are approached to solve problems by making the current best ch
 """
 Example for diff:
 I have coins each coin can be infinite  and sum s my task is to get min coins equal to sum
-[4,1,2] and s=6  i need 2 coins(4+1)
+[4,1,2] and s=5  i need 2 coins(4+1)
 [9,6,5,1] and s=10 i need 3 coins(9+9+1)
 Here greedy fails
 No this cannot be solved using Greedy apprach. (e.g., coins = {9, 6, 1} and sum = 11).
@@ -56,3 +56,64 @@ class Solution:
                 mval+=(i[0]*diff)
                 break
         return mval
+"""
+678. Valid Parenthesis String
+
+Given a string s containing only three types of characters: '(', ')' and '*', return true if s is valid.
+The following rules define a valid string:
+Any left parenthesis '(' must have a corresponding right parenthesis ')'.
+Any right parenthesis ')' must have a corresponding left parenthesis '('.
+Left parenthesis '(' must go before the corresponding right parenthesis ')'.
+'*' could be treated as a single right parenthesis ')' or a single left parenthesis '(' or an empty string "".
+ 
+Example 1:
+
+Input: s = "()"
+Output: true
+Example 2:
+
+Input: s = "(*)"
+Output: true
+Example 3:
+
+Input: s = "(*))"
+Output: true
+
+Constraints:
+1 <= s.length <= 100
+s[i] is '(', ')' or '*'.
+"""
+#1)Using stack
+#2)Lets try to be greedy
+"""
+You may think of appending (,* to stack and whenever ) appears stack.pop()
+First prioritize ( cause * can be anything (or * or)
+If no ( then pop *.
+After all this is over you once again need to pop the ( and * stacks  as * can ) for ( stack elements
+But make sure index of ( elements<index of *
+if len(stack-[(])==0 true we dont care stack-[*] cause they can even be empty space
+"""
+class Solution(object):
+    def checkValidString(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        s1=[]#for (
+        s2=[]#for *
+        for i in range(len(s)):
+            if s[i]=="(":
+                s1.append("(")
+            elif s[i]=="*":
+                s2.append("*")
+            else:
+                if not s1 and not s2:
+                    return False
+                if s1:
+                    s1.pop()
+                elif s2:
+                    s2.pop()
+        while s1 and s2 and s1[-1]<s2[-1]:
+            s1.pop()
+            s2.pop()
+        return len(s1)==0
