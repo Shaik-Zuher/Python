@@ -6,7 +6,7 @@
 Tip: When ever minimum is given in question first see if there is any monotoic nature(BS).
 If no check greedy am i choose what is best while making decision--After that check heap(Because greedy comes with heap most time).
 """
-#Dp min can be different as contraints will be always small around 200 like this seriously
+#Dp min can be different as contraints will be always small around 200 like this seriously.
 #Main point is in dp we break into sub problems and keep solving sub problems
 #While greedy is selecting optimally if we have something better then that is my answer I dont care about future
 #On other hand dp is even if i get answer i will leave it cause i know there can be something even better(Like rejecting deloite)
