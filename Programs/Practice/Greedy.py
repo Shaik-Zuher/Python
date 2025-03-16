@@ -8,7 +8,7 @@ If no check greedy am i choose what is best while making decision--After that ch
 """
 #Dp min can be different as contraints will be always small around 200 like this seriously.
 #Main point is in dp we break into sub problems and keep solving sub problems.
-#While greedy is selecting optimally if we have something better then that is my answer I dont care about future
+#While greedy is selecting optimally if we have something better then that is my answer I dont care about future.
 #On other hand dp is even if i get answer i will leave it cause i know there can be something even better(Like rejecting deloite)
 """
 Greedy Algorithms are approached to solve problems by making the current best choice at each stage with the hope of getting the best answer overall as well. At each step of the algorithm, we choose the best possible option available without considering the consequences of the choice in future steps.
