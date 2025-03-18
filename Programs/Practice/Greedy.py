@@ -16,7 +16,7 @@ Greedy Algorithms are approached to solve problems by making the current best ch
 """
 """
 Example for diff:
-I have coins each coin can be infinite  and sum s my task is to get min coins equal to sum
+I have coins each coin can be infinite  and sum s my task is to get min coins equal to sum.
 [4,1,2] and s=5  i need 2 coins(4+1)
 [9,6,5,1] and s=10 i need 3 coins(9+9+1)
 Here greedy fails
