@@ -1,6 +1,6 @@
 #Greedy actually subtopic of dp and even sometimes heap.
 #Greedy involves the point of becoming really greedy like man what does it even min.
-#Greedy identified by optimal,maximum,minimum,smallest.largest.
+#Greedy identified by optimal,maximum,minimum,smallest,largest.
 #Like i always say minimum can be bs,heap,greedy,dp.
 """
 Tip: When ever minimum is given in question first see if there is any monotoic nature(BS).
