@@ -24,7 +24,7 @@ Here greedy fails
 No this cannot be solved using Greedy apprach. (e.g., coins = {9, 6, 1} and sum = 11).
 The greedy choice would pick {9,1,1} (3 coins), but the optimal solution is {6, 6} (2 coins).
 """
-#Classic Fractional Knapsnack
+#Classic Fractional Knapsnack.
 """
 Problem Statement: The weight of N items and their corresponding values are given. We have to put these items in a knapsack of weight W such that the total value obtained is maximized.
 Note: We can either take the item as a whole or break it into smaller units.
