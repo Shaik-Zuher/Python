@@ -73,7 +73,7 @@ Output: true
 Example 2:
 
 Input: s = "(*)"
-Output: true
+Output: true.
 Example 3:
 
 Input: s = "(*))"
