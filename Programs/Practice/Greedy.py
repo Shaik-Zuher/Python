@@ -19,7 +19,7 @@ Example for diff:
 I have coins each coin can be infinite  and sum s my task is to get min coins equal to sum.
 [4,1,2] and s=5  i need 2 coins(4+1).
 [9,6,5,1] and s=10 i need 3 coins(9+9+1).
-Here greedy fails
+Here greedy fails.
 No this cannot be solved using Greedy apprach. (e.g., coins = {9, 6, 1} and sum = 11).
 The greedy choice would pick {9,1,1} (3 coins), but the optimal solution is {6, 6} (2 coins).
 """
