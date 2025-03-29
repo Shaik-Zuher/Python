@@ -57,7 +57,7 @@ class Solution:
                 break
         return mval
 """
-678. Valid Parenthesis String
+678. Valid Parenthesis String.
 
 Given a string s containing only three types of characters: '(', ')' and '*', return true if s is valid.
 The following rules define a valid string:
