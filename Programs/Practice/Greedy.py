@@ -32,7 +32,7 @@ Input: N = 3, W = 50, values[] = {100,60,120}, weight[] = {20,10,30}.
 Output: 240.00
 Explanation: The first and second items  are taken as a whole  while only 20 units of the third item is taken. Total value = 100 + 60 + 80 = 240.00
 """
-#I will think from small weight and keep on movie but i am gonna br greedy and want more val
+#I will think from small weight and keep on movie but i am gonna br greedy and want more val.
 #What will capacity think man
 #Instead of having everything we can have fraction part right so for each index check which has more val for 1 unit weight
 #sort these val(per unit) in descending order
