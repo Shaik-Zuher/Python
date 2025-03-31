@@ -91,7 +91,7 @@ First prioritize ( cause * can be anything (or * or)
 If no ( then pop *.
 After all this is over you once again need to pop the ( and * stacks  as * can ) for ( stack elements
 But make sure index of ( elements<index of *
-if len(stack-[(])==0 true we dont care stack-[*] cause they can even be empty space
+if len(stack-[(])==0 true we dont care stack-[*] cause they can even be empty space.
 """
 class Solution(object):
     def checkValidString(self, s):
