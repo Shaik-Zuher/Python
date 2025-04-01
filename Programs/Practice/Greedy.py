@@ -87,7 +87,7 @@ s[i] is '(', ')' or '*'.
 #2)Lets try to be greedy
 """
 You may think of appending (,* to stack and whenever ) appears stack.pop()
-First prioritize ( cause * can be anything (or * or)
+First prioritize ( cause * can be anything (or * or).
 If no ( then pop *.
 After all this is over you once again need to pop the ( and * stacks  as * can ) for ( stack elements
 But make sure index of ( elements<index of *
