@@ -84,7 +84,7 @@ Constraints:
 s[i] is '(', ')' or '*'.
 """
 #1)Using stack
-#2)Lets try to be greedy
+#2)Lets try to be greedy.
 """
 You may think of appending (,* to stack and whenever ) appears stack.pop()
 First prioritize ( cause * can be anything (or * or).
