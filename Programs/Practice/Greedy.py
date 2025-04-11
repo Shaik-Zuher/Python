@@ -14,6 +14,7 @@ If no check greedy am i choose what is best while making decision--After that ch
 Greedy Algorithms are approached to solve problems by making the current best choice at each stage with the hope of getting the best answer overall as well. At each step of the algorithm, we choose the best possible option available without considering the consequences of the choice in future steps.
 ####$$$  I feel sick!!!!!!!!!!!!!!!!!
 """
+
 """
 Example for diff:
 I have coins each coin can be infinite  and sum s my task is to get min coins equal to sum.
