@@ -40,6 +40,9 @@ conditions for bs:
 6)peak
 7)min max dist between gas stations---different casse based on decimal numbers
 """
+##In min=max both given read question carefully to determine whether search-space to be shifted to small or big 
+##Imporant point is if min is used in if cond:e=mid-1 then condition(function) returns something like some<=k(less than) i.e both must be min.
+###Always need not to be case read questions carefully.
 """
 In question like make array of elements equal minimum moves we can use bs
 in this we use  (lets say cost is outer func to caaculate cost)
@@ -84,4 +87,3 @@ def duplicate(arr):
             else:
                 e=mid-1
     return -1
-
