@@ -3,7 +3,7 @@
 #Greedy identified by optimal,maximum,minimum,smallest,largest.
 #Like i always say minimum can be bs,heap,greedy,dp.
 """
-Tip: When ever minimum is given in question first see if there is any monotoic nature(BS)..
+Tip: When ever minimum is given in question first see if there is any monotoic nature(BS)...
 If no check greedy am i choose what is best while making decision--After that check heap(Because greedy comes with heap most time).
 """
 #Dp min can be different as contraints will be always small around 200 like this seriously.
