@@ -1,4 +1,4 @@
-#Linked lst and hashmap are related.
+#linked lst and hashmap are related
 """In test cases they will say head is given but check if head is None this is mistake you do most of time"""
 #one powerful algo is hare tortosie mechanism
 #1 2 3 4 5 we have this find middle
@@ -129,3 +129,28 @@ Consider example 6, 2, 4, 1, 3, 2, 5, 2. Then we have the following singly-linke
 We start with index 0, look what is inside? it is number 6, so we look at index number 6, what is inside? Number 5 and so on. Look at the image below for better understanding.
 So the goal is to find loop in this linkes list. Why there will be always loop? Because nums[1] = nums[5] in our case, and similarly there will be always duplicate, and it is given that it is only one.
 """
+
+
+"""Y shaped linked list find intersction point of 2 LL
+1)BruteForce
+2)hashmap/set--store one LL in hp/set  -O(m+n) space-o(m)  --Wont be liked want O(1) space
+3)2 pointers alternate interchange(only once)
+Take 2 pointers and traverse both LL simultaneously and when temp1 is null chsnge temp1 to head2 vice versa until interection found
+Be carefull works only if there is confirm intersection otherwise TLE
+4)when intersection may not be there use difference count find len of both diff=large-small 
+start trvaerse from large point(index) in l(one) and then run parallel(l2)--boom works
+"""
+class Solution:
+    def intersectPoint(self, head1, head2):
+        t1=head1
+        t2=head2
+        while t1!=t2:
+            if t1:
+                t1=t1.next
+            else:
+                t1=head2
+            if t2:
+                t2=t2.next
+            else:
+                t2=head1
+        return t1
