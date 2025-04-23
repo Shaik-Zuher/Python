@@ -1,7 +1,7 @@
 #linked list and hashmap are related
 """In test cases they will say head is given but check if head is None this is mistake you do most of time"""
 #one powerful algo is hare tortosie mechanism
-#1 2 3 4 5 we have this find middle
+#1 2 3 4 5 we have this find middle.
 #turtle moves 1 poinet and hare moves 2 points
 # 1 2 3 4 5
 # t
