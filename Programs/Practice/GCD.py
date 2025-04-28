@@ -1,5 +1,5 @@
 #gcd follow euler's theorem
-# if a=b:retun a
+#if a=b:retun a
 #if a>b return gcd(a-b,b)
 #else return gcd(a,b-a)
 class Solution:
