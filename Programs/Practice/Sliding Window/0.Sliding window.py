@@ -121,6 +121,12 @@ ex:count the number of subarrays with sum=0
 ####Logic here
 #count(condtion)=count(<=condition)-count(<=condition-1)
 #arr=[1,0,0,1] find number of subarrays where sum=0
+
+"""
+Important point to note:
+This count(k)-count(k-1) works only for exactly or atmost  k type
+For atleast k use (total no of subarray)-count(k-1)  total subarray=n(n-1)/2(SUM of N numbers)
+"""
 arr=[1,0,0,1]
 goal=0
 def count(arr,goal):
@@ -140,6 +146,16 @@ def count(arr,goal):
     return c 
 #############Another point------whenever there is while inside while main condition if not needed at all
 print(count(arr,goal)-count(arr,goal-1))
+##Atleast k 
+"""
+arr=[1,2,2,3] say it want  subarray which has 2 atleast k times
+[1,2,2] is answer cnt+=(j-i+1) but can you use cnt+=(n-j) i mean if this is subarry after that everything will also be subarry
+then use while and keep removing elements
+[2,2] so answer cnt+=(n-j)   ---which contains [2,2],[2,2,3]
+Then answer=4
+for this no need of allsubs-count(k-1) but return cnt directly
+"""
+#####
 """
 4.Minmum window problems
 same as 2nd pattern but somewhat different
