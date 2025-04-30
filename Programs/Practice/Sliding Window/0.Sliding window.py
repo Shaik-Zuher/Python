@@ -126,6 +126,8 @@ ex:count the number of subarrays with sum=0
 Important point to note:
 This count(k)-count(k-1) works only for exactly or atmost  k type
 For atleast k use (total no of subarray)-count(k-1)  total subarray=n(n-1)/2(SUM of N numbers)
+well sometimes normal count(k)-count(k-1) works just play around and try both of them.(read question carfully
+example asked atleas one occur if a,b,c that means exactly a,b,c but not atleast because atleast not main but a,b,c is main)
 """
 arr=[1,0,0,1]
 goal=0
