@@ -21,6 +21,7 @@ Explanation: Both 'a's from t must be included in the window.
 Since the largest window of s only has one 'a', return empty string.
 """
 #As substring doesnt maintain any order lets take hashmap and calculate counts
+#################If there is need for 2 hashmaps only use one and decremnt the values in it....
 class Solution(object):
     def minWindow(self, s, t):
         i,j,cnt=0,0,0
