@@ -12,6 +12,7 @@ Input: s1 = "ab", s2 = "eidboaoo"
 Output: false
 """
 #Like general liding window but window size must be len(str1)
+########################!!!!!!!!!!!!!!!!!!!There are lot problems like this check given string in word(consecutive) then also just keep window size=len(strng)
 class Solution(object):
     def checkInclusion(self, s1, s2):
         """
