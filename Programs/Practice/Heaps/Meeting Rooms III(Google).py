@@ -133,6 +133,7 @@ class Solution(object):
             Ex:used=[[14,1],[17,0]] next meeting [18,25] my prev approch used to check only [14,1] but [17,0] also empty so thats why remove all and add at last
 5)When a room becomes unused, meetings that have an earlier original start time should be given the room-Sorting meetings
 """
+####################Avoid using time dont use until asked to return time ant try to see if can be solved without it
 class Solution(object):
     def mostBooked(self, n, meetings):
         """
@@ -177,6 +178,41 @@ class Solution(object):
             elif ans[i]==m:
                 a=min(a,i)
         return a
+###Done shorter by me
+from heapq import *
+class Solution:
+    def mostBooked(self, n, meetings):
+        use=[]
+        room=[]
+        free=[]
+        for i in range(n):
+            room.append(0)
+            heappush(free,i)
+        meetings.sort()
+        for i in range(len(meetings)):
+            start,end=meetings[i]
+            while use and use[0][0]<=start:###Used while outside
+                heappush(free,heappop(use)[1])
+            if not use:
+                curr=heappop(free)
+                heappush(use,[end,curr])
+            else:
+                if free:
+                    curr=heappop(free)
+                    heappush(use,[end,curr])##If free then until the end
+                else:
+                    a=heappop(use)
+                    curr=a[1]
+                    heappush(use,[a[0]+(end-start),curr])#not free delay exists so existing_time(delay)+diff-->cause gonna be free after delay right
+            room[curr]+=1
+            #No use of time
+        m=0
+        index=-1
+        for i in range(n):
+            if(m<room[i]):
+                index=i
+                m=room[i]
+        return index
 """
 Epliogue:
 similar pattern is task shedler,process for tasks servers
