@@ -180,7 +180,7 @@ class Solution(object):
             elif ans[i]==m:
                 a=min(a,i)
         return a
-###Done shorter by me
+###Done shorter by me.
 from heapq import *
 class Solution:
     def mostBooked(self, n, meetings):
