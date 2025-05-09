@@ -235,5 +235,5 @@ Here task 10 at time 0 takes server 1 until 10
 
 Another thing when loop  depends on length of array i then dont ever use deque
 Use deque when you dont have to worry about i(index of array)
-In task sheduler we store all values in pq and run loop until pq is empty so deque no problem
+In task sheduler we store all values in pq and run loop until pq is empty so deque no problem.
 """
